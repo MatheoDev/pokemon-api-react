@@ -16,10 +16,10 @@ const Table = ({pokemons}) => {
       </thead>
       <tbody>
         {
-          pokemons.map((p , index)=> <tr key={index}>
-            <td scope="col">{getIdPokemon(p.url)}</td>
-            <td scope="col">{p.name}</td>
-            <td scope="col"><Link to={`/pokemon/${p.url}`}>{p.url}</Link></td>
+          pokemons.map((p , index) => <tr key={index}>
+            <td>{getIdPokemon(p.url)}</td>
+            <td>{p.name}</td>
+            <td><Link to={`/pokemon/${getIdPokemon(p.url)}`}>{p.url}</Link></td>
           </tr>)
         }
       </tbody>
